@@ -1,32 +1,42 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <!-- 特效背景插件 -->
+    <div class="AppbgTemplate">
+      <Particles/>
+    </div>
+
     <router-view/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Particles from '@/components/backgroundTemplate/Particle.vue'
+export default {
+  name:'App',
+  components:{
+    Particles
+  }
 }
+</script>
 
-nav {
-  padding: 30px;
+<style lang="less">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+/* 设置全局大小 */
+#app{
+  width: 100%;
+  height: 100vh;
+  // 插件特效容器样式,将背景屏幕填满
+  .AppbgTemplate{
+    // z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
 }
 </style>
