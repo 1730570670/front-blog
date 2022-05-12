@@ -4,7 +4,6 @@
     <div class="AppbgTemplate">
       <Particles/>
     </div>
-
     <router-view/>
   </div>
 </template>
@@ -15,7 +14,22 @@ export default {
   name:'App',
   components:{
     Particles
-  }
+  },
+  // 挂载是手机端电脑端
+  methods: {
+    _isMobile() {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag;
+    }
+  },
+  mounted() {
+    //判断是PC端手机端,跳转对应的路由
+      if (!this._isMobile()) {
+        this.$router.push({path:'/home'});
+      } else {
+        this.$router.push({path:'/phome'});
+      }
+   }
 }
 </script>
 
@@ -31,7 +45,11 @@ export default {
   height: 100vh;
   // 插件特效容器样式,将背景屏幕填满
   .AppbgTemplate{
-    // z-index: -1;
+    background-image: url('https://img0.baidu.com/it/u=3415031676,1265821426&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800');
+    background-repeat: no-repeat;
+    background-position: "center center";
+    background-size:cover;
+    z-index: -1;
     width: 100%;
     height: 100%;
     position: fixed;

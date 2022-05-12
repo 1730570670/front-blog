@@ -1,4 +1,5 @@
 <template>
+  <!-- 特效组件 -->
   <div class="particlesContainer">
       <vue-particles class="particles"
         color="#0293dd"
@@ -16,7 +17,7 @@
         hoverMode="grab"
         :clickEffect="true"
         clickMode="push"
-/>
+      />
   </div>
 </template>
 

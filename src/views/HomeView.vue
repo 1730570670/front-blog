@@ -1,21 +1,18 @@
 <template>
   <div class="home">
     <!-- 导航栏 -->
-     <div class="navBartools">
-
-     </div>
-     <div class="blogBody">
-
-     </div>
-
+    <Navbar/>
+    <!-- 内容区域 -->
+    <router-view/>
   </div>
 </template>
 
 <script>
-
+import Navbar from '@/components/home/Navbar'
 export default {
   name: 'HomeView',
   components: {
+    Navbar
   }
 }
 </script>
@@ -23,11 +20,5 @@ export default {
 .home{
   height: 100%;
   width: 100%;
-  // 导航栏
-  .navBartools{
-    width: 100%;
-    height: 8%;
-    background: #000;
-  }
 }
 </style>
