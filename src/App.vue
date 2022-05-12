@@ -23,7 +23,12 @@ export default {
     }
   },
   mounted() {
-    //判断是PC端手机端,跳转对应的路由
+      sessionStorage.setItem("isMobile",true)
+      //讲session会话存自身储存中,防止刷新将路由跳转会来
+      if(sessionStorage.getItem("isMobile")){
+        return;
+      }   
+      //判断是PC端手机端,跳转对应的路由
       if (!this._isMobile()) {
         this.$router.push({path:'/home'});
       } else {

@@ -11,7 +11,7 @@
       <div class="navBarContainer">
         <!-- 导航栏选择项 -->
         <div class="navItem" v-for="item,index in navBar" :key="item.path"
-         @click="RouterLink(item.path)" :style="index==index?'color':''">
+         @click="RouterLink(item,index)" :style="index==navIndex?'color:#409EFF':''">
           <i :class="item.icon"></i>
           <span>{{item.label}}</span>
         </div>
@@ -45,14 +45,20 @@ export default {
           }
         ],
         // 根据标题查询博客数据
-        searchBlog:''
+        searchBlog:'',
+        // 导航栏点击之后下标变化,颜色改变
+        navIndex:0
       }
     },
     methods: {
       //路由跳转
-      RouterLink(path){
+      RouterLink(item,index){
+        //修改navBar字体下标
+        this.navIndex=index;
         //path  路由路径
-        this.$router.push({path})
+        this.$router.push({path:item.path})
+        //触发面包屑
+        this.$store.commit('breakCrumb',item)
       }
     },
 }
