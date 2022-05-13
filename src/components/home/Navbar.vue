@@ -1,22 +1,24 @@
 <template>
    <!-- 导航栏 -->
-    <div class="navBar">
-      <!-- 搜索框 -->
-      <div class="inputSearch">
-        <i class="el-icon-s-comment"></i>
-        <el-input placeholder="请输入标题查询内容"
-          prefix-icon="el-icon-search" v-model="searchBlog" show-word-limit>
-        </el-input>
-      </div>
-      <div class="navBarContainer">
-        <!-- 导航栏选择项 -->
-        <div class="navItem" v-for="item,index in navBar" :key="item.path"
-         @click="RouterLink(item,index)" :style="index==navIndex?'color:#409EFF':''">
-          <i :class="item.icon"></i>
-          <span>{{item.label}}</span>
+   <transition appear enter-active-class="animate__animated animate__fadeInDownBig">
+      <div class="navBar">
+        <div class="navBarContainer">
+          <!-- 导航栏选择项 -->
+          <div class="navItem" v-for="item,index in navBar" :key="item.path"
+          @click="RouterLink(item,index)" :style="index==navIndex?'color:#409EFF;':''">
+            <i :class="item.icon"></i>
+            <span>{{item.label}}</span>
+          </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="inputSearch">
+          <i class="el-icon-s-comment"></i>
+          <el-input placeholder="请输入标题查询内容"
+            prefix-icon="el-icon-search" v-model="searchBlog" show-word-limit>
+          </el-input>
         </div>
       </div>
-    </div>
+   </transition>  
 </template>
 
 <script>
@@ -73,11 +75,23 @@ export default {
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     white-space: nowrap;
+    // 导航栏大小
+    .navBarContainer{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color:white;
+        .navItem{
+          margin: 0 30px;
+        }
+    }
+    .navBarContainer :hover{
+      cursor: pointer;
+    }
     // 搜索框
     .inputSearch{
       flex: 1;
       height: 100%;
-      // justify-content: center;
       display: flex;
       align-items: center;
       //图标
@@ -92,18 +106,6 @@ export default {
         left: 20px;
       }
     }
-    // 导航栏大小
-    .navBarContainer{
-        // width: 30%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        // font-size: 23px;
-        color:white;
-        justify-content: space-around;
-    }
-    .navBarContainer :hover{
-      cursor: pointer;
-    }
+    
 }
 </style>

@@ -19,6 +19,7 @@ Vue.use(ElementUI);//ElementUI
 //关闭控制台提示
 Vue.config.productionTip = false
 
+import 'animate.css';//引入animate样式
 //创建实例
 new Vue({
   router,

@@ -81,8 +81,6 @@ export default {
     width: 100%;
     height: 100%;
     position: fixed;
-    left: 0;
-    top: 0;
   }
   // 点击屏幕出现爱心以及文字样式(创建出的节点)
   .heart{

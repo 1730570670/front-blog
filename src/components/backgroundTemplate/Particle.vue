@@ -33,7 +33,7 @@ export default {
     height: 100%;
     .particles{
         width: 100%;
-        height: 100%;
+        height: 100%;     
     }
 }
 

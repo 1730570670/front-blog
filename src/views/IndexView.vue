@@ -11,9 +11,11 @@
       </el-card>
     </div>
     <!-- 中间容器(博客信息) -->
-    <div class="centerContainer">
+    <transition appear enter-active-class="animate__animated  animate__fadeInLeft">
+      <div class="centerContainer">
 
-    </div>
+      </div>
+    </transition>
     <!-- 右边容器(其他信息) -->
     <div class="rightContainer">
       <!-- 日历组件 -->
