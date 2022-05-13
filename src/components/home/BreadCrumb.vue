@@ -49,7 +49,7 @@ export default {
     // flex弹性布局
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 26px;
     // 标签
     .tagBreakCrumb{
         width: 80px;

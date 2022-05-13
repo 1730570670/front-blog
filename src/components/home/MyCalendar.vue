@@ -46,26 +46,28 @@ export default {
 .now-data-myself {
   width: 40%;
   position: absolute;
+  padding: 0px 24px;
   border-right: 1px solid rgba(227, 227, 227, 0.6);
 }
 .con {
   position: relative;
-  max-width: 280px;
-  margin: auto;
+  max-width: 100%;
+  border: 1px solid;
+
 }
 .con .wh_content_all {
   background: transparent !important;
 }
 .wh_top_changge li {
-  color: #409EFF !important;
+  color: #909399  !important;
   font-size: 15px !important;
 }
 .wh_content_item,
 .wh_content_item_tag {
-  color: #303133 !important;
+  color: #409EFF !important;
 }
 .wh_content_item .wh_isToday {
-  background: #00d985 !important;
+  background: #F56C6C !important;
   color: #fff !important;
 }
 .wh_content_item .wh_chose_day {

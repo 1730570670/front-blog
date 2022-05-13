@@ -77,13 +77,14 @@ export default {
     .inputSearch{
       flex: 1;
       height: 100%;
-      justify-content: center;
+      // justify-content: center;
       display: flex;
       align-items: center;
       //图标
       i{
         font-size: 25px;
         color: white;
+        margin-left: 200px;
       }
       .el-input{
         width: 260px;
@@ -93,7 +94,7 @@ export default {
     }
     // 导航栏大小
     .navBarContainer{
-        width: 30%;
+        // width: 30%;
         height: 100%;
         display: flex;
         align-items: center;
