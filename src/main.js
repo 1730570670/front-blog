@@ -19,10 +19,16 @@ Vue.use(ElementUI);//ElementUI
 //关闭控制台提示
 Vue.config.productionTip = false
 
+//引入封装格式化时间函数
+import formatDate from './common/formatDate';
+//注册全局函数
+Vue.prototype.$formatDate=formatDate
+
 import 'animate.css';//引入animate样式
 //创建实例
 new Vue({
+  el:'#app',
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+})

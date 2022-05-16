@@ -75,6 +75,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     white-space: nowrap;
+    overflow: hidden;
     // 导航栏大小
     .navBarContainer{
         height: 100%;

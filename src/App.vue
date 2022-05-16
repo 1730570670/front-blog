@@ -50,7 +50,7 @@ export default {
           love.remove();
         },1500)
       })
-    }
+    },
   },
   mounted() {
     // 加载适配方案
@@ -76,8 +76,8 @@ export default {
     background-image: url('https://img0.baidu.com/it/u=3415031676,1265821426&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800');
     background-repeat: no-repeat;
     background-position: "center center";
-    background-size:cover;
-    z-index: -1;
+    background-size:100%;
+    z-index: -999;
     width: 100%;
     height: 100%;
     position: fixed;

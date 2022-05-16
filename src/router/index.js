@@ -32,6 +32,10 @@ const routes = [
           path:'/home/other',
           name:'other',
           component:()=>import('@/views/Other.vue')
+        },{
+          path:'/home/blogInfo',
+          name:'blogInfo',
+          component:()=>import('@/views/BlogInfo.vue')
         }
       ]
     },{
@@ -45,17 +49,21 @@ const routes = [
           name:'pindex',
           component:()=>import('@/views/Phone/PhoneIndexView.vue')
         },{
-          path:'/phome/pclassify',
+          path:'/phome/classify',
           name:'pclassify',
           component:()=>import('@/views/Phone/PhoneClassIfy.vue')
         },{
-          path:'/phome/pabout',
+          path:'/phome/about',
           name:'pabout',
           component:()=>import('@/views/Phone/PhoneAbout.vue')
         },{
-          path:'/phome/pother',
+          path:'/phome/other',
           name:'pother',
           component:()=>import('@/views/Phone/PhoneOther.vue')
+        },{
+          path:'/phome/blogInfo',
+          name:'pblogInfo',
+          component:()=>import('@/views/Phone/PhoneBlogInfo.vue')
         }
       ]
     }

@@ -53,7 +53,6 @@ export default {
   position: relative;
   max-width: 100%;
   border: 1px solid;
-
 }
 .con .wh_content_all {
   background: transparent !important;
